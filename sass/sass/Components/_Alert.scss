@@ -1,0 +1,16 @@
+div:where(.swal2-container) div:where(.swal2-popup) {
+    background-color: $white2 !important;
+}
+
+div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm {
+    @extend %btn;
+    padding-left: 30px;
+    padding-right: 30px;
+    font-weight: bold;
+}
+div:where(.swal2-container) h2:where(.swal2-title){
+    padding-top: 10px !important;
+}
+div:where(.swal2-container) .swal2-html-container{
+    margin-top: 0px !important;
+}

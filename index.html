@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+		<title>Memory Game | JavaScript Game</title>
+
+		<link rel="icon" href="img/logo.png">
+
+		<meta name="description"
+			content="Create a fun and challenging memory game to test your memory skills. Match pairs of cards within a time limit and a preset number of flips.">
+
+		<meta name="keywords"
+			content="memory game, TypeScript, SCSS, HTML, responsive, 40 flips, 60 seconds, 16 cards, matching pairs,  pairs, cards, memory skills, time limit, flips, matching game, card game">
+
+		<meta name="theme-color" content="#111">
+
+		<link rel="stylesheet" type="text/css" href="css/loader.css" media="all">
+		<link rel="stylesheet" type="text/css" href="css/home.css" media="all">
+
+		<!--[if lt IE 9]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+	</head>
+
+	<body>
+
+		<div id="loadingDiv">
+			<div class="loader">Loading...</div>
+		</div>
+
+		<!-- باقي اقسام الموقع -->
+		<div id="body">
+			<div class="wrapper">
+				<ul class="cards">
+					<li class="card">
+						<div class="view front-view">
+							<img src="img/qm.svg" alt="icon">
+						</div>
+						<div class="view back-view">
+							<img src="img/img-1.png" alt="card-img">
+						</div>
+					</li>
+					<li class="card">
+						<div class="view front-view">
+							<img src="img/qm.svg" alt="icon">
+						</div>
+						<div class="view back-view">
+							<img src="img/img-2.png" alt="card-img">
+						</div>
+					</li>
+					<li class="card">
+						<div class="view front-view">
+							<img src="img/qm.svg" alt="icon">
+						</div>
+						<div class="view back-view">
+							<img src="img/img-3.png" alt="card-img">
+						</div>
+					</li>
+					<li class="card">
+						<div class="view front-view">
+							<img src="img/qm.svg" alt="icon">
+						</div>
+						<div class="view back-view">
+							<img src="img/img-4.png" alt="card-img">
+						</div>
+					</li>
+					<li class="card">
+						<div class="view front-view">
+							<img src="img/qm.svg" alt="icon">
+						</div>
+						<div class="view back-view">
+							<img src="img/img-5.png" alt="card-img">
+						</div>
+					</li>
+					<li class="card">
+						<div class="view front-view">
+							<img src="img/qm.svg" alt="icon">
+						</div>
+						<div class="view back-view">
+							<img src="img/img-6.png" alt="card-img">
+						</div>
+					</li>
+					<li class="card">
+						<div class="view front-view">
+							<img src="img/qm.svg" alt="icon">
+						</div>
+						<div class="view back-view">
+							<img src="img/img-7.png" alt="card-img">
+						</div>
+					</li>
+					<li class="card">
+						<div class="view front-view">
+							<img src="img/qm.svg" alt="icon">
+						</div>
+						<div class="view back-view">
+							<img src="img/img-8.png" alt="card-img">
+						</div>
+					</li>
+
+					<li class="card">
+						<div class="view front-view">
+							<img src="img/qm.svg" alt="icon">
+						</div>
+						<div class="view back-view">
+							<img src="img/img-1.png" alt="card-img">
+						</div>
+					</li>
+					<li class="card">
+						<div class="view front-view">
+							<img src="img/qm.svg" alt="icon">
+						</div>
+						<div class="view back-view">
+							<img src="img/img-2.png" alt="card-img">
+						</div>
+					</li>
+					<li class="card">
+						<div class="view front-view">
+							<img src="img/qm.svg" alt="icon">
+						</div>
+						<div class="view back-view">
+							<img src="img/img-3.png" alt="card-img">
+						</div>
+					</li>
+					<li class="card">
+						<div class="view front-view">
+							<img src="img/qm.svg" alt="icon">
+						</div>
+						<div class="view back-view">
+							<img src="img/img-4.png" alt="card-img">
+						</div>
+					</li>
+					<li class="card">
+						<div class="view front-view">
+							<img src="img/qm.svg" alt="icon">
+						</div>
+						<div class="view back-view">
+							<img src="img/img-5.png" alt="card-img">
+						</div>
+					</li>
+					<li class="card">
+						<div class="view front-view">
+							<img src="img/qm.svg" alt="icon">
+						</div>
+						<div class="view back-view">
+							<img src="img/img-6.png" alt="card-img">
+						</div>
+					</li>
+					<li class="card">
+						<div class="view front-view">
+							<img src="img/qm.svg" alt="icon">
+						</div>
+						<div class="view back-view">
+							<img src="img/img-7.png" alt="card-img">
+						</div>
+					</li>
+					<li class="card">
+						<div class="view front-view">
+							<img src="img/qm.svg" alt="icon">
+						</div>
+						<div class="view back-view">
+							<img src="img/img-8.png" alt="card-img">
+						</div>
+					</li>
+
+				</ul>
+				<section class="details">
+					<p class="time">Time: <span><b>60</b>s</span></p>
+					<span>|</span>
+					<p class="flips">Flips: <span><b>40</b></span></p>
+					<span>|</span>
+					<button>Refresh</button>
+				</section>
+			</div>
+		</div>
+
+		<script type="text/javascript" src="js/lib/sweetalert2.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+		<script type="text/javascript" src="js/loader.js"></script>
+
+	</body>
+
+</html>
