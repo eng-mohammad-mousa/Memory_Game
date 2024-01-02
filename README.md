@@ -1,6 +1,6 @@
 <h1><img src="img/logo.png" alt="Snake" width="27" height="27"> Memory Game</h1>
 
-A fun memory game built with TypeScript and SCSS.
+A fun memory game built with TypeScript and styled with SCSS.
 
 <br>
 

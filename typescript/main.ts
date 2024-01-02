@@ -27,8 +27,9 @@ function initTimer(): void {
     }
 }
 function decFlip(): void {
-    flips--;
+
     if (flips > 0) {
+        flips--;
         flipsTag.innerText = `${flips}`;
     } else {
         flipsTag.innerText = `${0}`;
@@ -73,7 +74,7 @@ function gameOver(): void {
     } else if (timeLeft == 0) {
         Swal.fire({
             title: "Game Over!",
-            text:  ` The time ran out, press Ok To Try Again! `,
+            text: ` The time ran out, press Ok To Try Again! `,
             icon: "error",
             confirmButtonText: 'Ok',
             allowOutsideClick: false,
@@ -159,6 +160,7 @@ function flipCard(e: any): void {
 }
 
 function matchCards(img1: string, img2: string): void {
+
     if (img1 === img2) {
         matchedCard++;
         if (matchedCard == 8 && timeLeft > 0) {
@@ -170,17 +172,21 @@ function matchCards(img1: string, img2: string): void {
             flipResponse = true;
         }
     } else {
-        setTimeout(() => {
-            cardOne.classList.add("shake");
-            cardTwo.classList.add("shake");
-        }, 400);
+        if ((flips == 0)) {
+            gameOver();
+        } else {
+            setTimeout(() => {
+                cardOne.classList.add("shake");
+                cardTwo.classList.add("shake");
+            }, 400);
 
-        setTimeout(() => {
-            cardOne.classList.remove("shake", "flip");
-            cardTwo.classList.remove("shake", "flip");
-            cardOne = cardTwo = "";
-            flipResponse = true;
-        }, 1200);
+            setTimeout(() => {
+                cardOne.classList.remove("shake", "flip");
+                cardTwo.classList.remove("shake", "flip");
+                cardOne = cardTwo = "";
+                flipResponse = true;
+            }, 1200);
+        }
     }
 }
 

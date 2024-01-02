@@ -4,7 +4,6 @@
     justify-content: center;
     min-height: 100vh;
     position: relative;
-    overflow: hidden;
     padding: 15px;
 
     background: linear-gradient(to right bottom, #48E9D1, #A8E063, #FFCE4B, #FF8E53, #FF6B6B);
@@ -50,6 +49,12 @@
             @media screen and (min-width:576px) {
                 width: 380px;
                 min-height: 380px;
+            }
+
+
+            @media screen and (min-width:1400px) {
+                width: 480px;
+                min-height: 480px;
             }
 
             .card {

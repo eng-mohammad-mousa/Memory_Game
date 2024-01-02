@@ -12,8 +12,8 @@ function initTimer() {
     }
 }
 function decFlip() {
-    flips--;
     if (flips > 0) {
+        flips--;
         flipsTag.innerText = `${flips}`;
     }
     else {
@@ -124,16 +124,21 @@ function matchCards(img1, img2) {
         }
     }
     else {
-        setTimeout(() => {
-            cardOne.classList.add("shake");
-            cardTwo.classList.add("shake");
-        }, 400);
-        setTimeout(() => {
-            cardOne.classList.remove("shake", "flip");
-            cardTwo.classList.remove("shake", "flip");
-            cardOne = cardTwo = "";
-            flipResponse = true;
-        }, 1200);
+        if ((flips == 0)) {
+            gameOver();
+        }
+        else {
+            setTimeout(() => {
+                cardOne.classList.add("shake");
+                cardTwo.classList.add("shake");
+            }, 400);
+            setTimeout(() => {
+                cardOne.classList.remove("shake", "flip");
+                cardTwo.classList.remove("shake", "flip");
+                cardOne = cardTwo = "";
+                flipResponse = true;
+            }, 1200);
+        }
     }
 }
 refreshBtn.addEventListener("click", shuffleCard);
