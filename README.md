@@ -1,6 +1,15 @@
 <h1><img src="img/logo.png" alt="Snake" width="27" height="27"> Memory Game</h1>
 
 A fun memory game built with TypeScript and styled with SCSS.
+<br>
+Challenge your memory skills with our exciting and addictive Memory Game, put your memory to the test as you try to match pairs of cards within a given time limit and a set number of flips. 
+<br>
+Sharpen your focus and concentration while having fun with this classic game.
+
+<br>
+
+## Live Demo
+You can play the game live by visiting the following link: [Live Demo](https://eng-mohammad-mousa.github.io/Memory_Game/)
 
 <br>
 
